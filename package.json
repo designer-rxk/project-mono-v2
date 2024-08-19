@@ -1,5 +1,6 @@
 {
-  "name": "project-mono-v2",
+  "name": "mono",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -14,6 +15,9 @@
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {
-    "node": ">=18"
+    "node": ">=18",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm",
+    "pnpm": ">=9"
   }
 }
