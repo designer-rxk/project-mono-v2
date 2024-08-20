@@ -10,6 +10,14 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "@mono/web#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": [
+        "SANITY_STUDIO_PROJECT_ID",
+        "SANITY_STUDIO_DATASET"
+      ]
+    },
     "dev": {
       "cache": false,
       "persistent": true
