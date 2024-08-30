@@ -14,8 +14,15 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**"],
       "env": [
+        "SANITY_STUDIO_API_VERSION",
+        "SANITY_STUDIO_PREVIEW_URL",
         "SANITY_STUDIO_PROJECT_ID",
-        "SANITY_STUDIO_DATASET"
+        "SANITY_STUDIO_DATASET",
+        "SANITY_API_READ_TOKEN",
+
+        "NEXT_PUBLIC_VERCEL_ENV",
+
+        "NODE_ENV"
       ]
     },
     "dev": {

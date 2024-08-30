@@ -1,9 +1,23 @@
-import { page } from "@documents";
+import {
+  baseStyles,
+  footer,
+  homepage,
+  page,
+  redirect,
+  searchPage,
+  siteSettings,
+} from "@documents";
 import { meta } from "@objects";
 
-export const schemas = [
+export const schemaTypes = [
   // Documents
+  homepage,
+  searchPage,
+  footer,
   page,
+  siteSettings,
+  baseStyles,
+  redirect,
   // Objects
   meta,
 ];

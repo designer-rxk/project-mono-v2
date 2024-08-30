@@ -1,11 +1,15 @@
+import { HelloWorldAction } from "@actions";
+import { presentationTool } from "@sanity/presentation";
 import { visionTool } from "@sanity/vision";
+import { schemaTypes } from "@schemas";
+import { groqdPlaygroundTool } from "groqd-playground";
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 
-import { schemas as types } from "./src/schemas";
+import deskStructure from "./src/desk-structure";
 
-export const projectId = process.env.SANITY_STUDIO_PROJECT_ID || "";
-export const dataset = process.env.SANITY_STUDIO_DATASET || "";
+export const projectId = "3x0we094";
+export const dataset = "production";
 
 export default defineConfig({
   name: "default",
@@ -14,7 +18,38 @@ export default defineConfig({
   projectId,
   dataset,
 
-  plugins: [structureTool(), visionTool()],
+  plugins: [
+    structureTool({ structure: deskStructure }),
+    groqdPlaygroundTool(),
+    visionTool(),
+    presentationTool({
+      previewUrl: {
+        draftMode: {
+          enable: "http://localhost:3000",
+        },
+      },
+    }),
+  ],
 
-  schema: { types },
+  document: {
+    actions: [HelloWorldAction],
+  },
+
+  schema: {
+    types: schemaTypes,
+    templates: (prev) => {
+      const pageChild = {
+        id: "page-child",
+        title: "Page: Child",
+        schemaType: "page",
+        parameters: [{ name: "parentId", title: "Parent ID", type: "string" }],
+        // This value will be passed-in from desk structure
+        value: ({ parentId }: { parentId: string }) => ({
+          parent: { _type: "reference", _ref: parentId },
+        }),
+      };
+
+      return [...prev, pageChild];
+    },
+  },
 });

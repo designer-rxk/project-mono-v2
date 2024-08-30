@@ -6,14 +6,15 @@ export const meta = defineType({
   type: "object",
   fields: [
     defineField({
-      name: "metaTitle",
+      name: "title",
       title: "Title",
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "metaDescription",
+      name: "description",
       title: "Description",
+      description: "Max 155 characters",
       type: "text",
       rows: 3,
       validation: (Rule) =>
@@ -31,8 +32,10 @@ export const meta = defineType({
     }),
     defineField({
       name: "image",
-      title: "Image",
+      title: "Open Graph image",
       type: "image",
+      description:
+        "Used for social media sharing. Featured image will be used if empty.",
       options: {
         hotspot: true,
       },

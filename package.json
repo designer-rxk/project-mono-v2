@@ -6,7 +6,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "dev:web": "turbo run dev --filter=@mono/web",
-    "dev:studio": "turbo run dev --filter=@mono/sanity",
+    "dev:studio": "turbo run dev --filter=@mono/studio",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

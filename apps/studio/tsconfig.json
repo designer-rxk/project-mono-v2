@@ -19,7 +19,10 @@
       "@documents": ["src/schemas/documents/index.ts"],
       "@actions": ["src/schemas/actions/index.ts"],
       "@objects": ["src/schemas/objects/index.ts"],
-      "@fields": ["src/schemas/fields/index.ts"]
+      "@fields": ["src/schemas/fields/index.ts"],
+      "@blocks": ["src/schemas/blocks/index.ts"],
+      "@utils": ["src/schemas/utils/index.ts"],
+      "@schemas": ["src/schemas/index.ts"],
     },
   },
   "include": ["**/*.ts", "**/*.tsx"],

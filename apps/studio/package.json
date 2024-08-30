@@ -16,10 +16,16 @@
     "sanity"
   ],
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
+    "@sanity/presentation": "^1.16.4",
     "@sanity/vision": "^3.54.0",
+    "groqd-playground": "^0.0.20",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rxjs": "^7.8.1",
     "sanity": "^3.54.0",
+    "sanity-plugin-iframe-pane": "^3.1.6",
+    "slugify": "^1.6.6",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
