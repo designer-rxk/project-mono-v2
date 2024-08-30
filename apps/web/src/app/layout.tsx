@@ -1,7 +1,7 @@
 import "./globals.css";
 
+import { ClientVisualEditing } from "@components";
 import { draftMode } from "next/headers";
-import { VisualEditing } from "next-sanity";
 import type { PropsWithChildren } from "react";
 
 export default function RootLayout({ children }: PropsWithChildren) {
@@ -19,7 +19,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
           </a>
         )}
         {children}
-        <VisualEditing />
+        <ClientVisualEditing />
       </body>
     </html>
   );

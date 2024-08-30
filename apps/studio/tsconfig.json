@@ -23,6 +23,7 @@
       "@blocks": ["src/schemas/blocks/index.ts"],
       "@utils": ["src/schemas/utils/index.ts"],
       "@schemas": ["src/schemas/index.ts"],
+      "@lib": ["src/lib/index.ts"],
     },
   },
   "include": ["**/*.ts", "**/*.tsx"],

@@ -1,9 +1,9 @@
 import "server-only";
 
+import { SANITY_READ_TOKEN } from "@utils";
 import { experimental_taintUniqueValue } from "react";
 
-export const token =
-  "skIgfXJbynKqLzh98Wa8iTwyWECZucnLGrTMwrjOs2hfxjjp4E8AlkRhvPbccJJIgGvKOCVhe4gmXX1If86K6S8jlpRJoaKgaZ22pzqnaMBssseQ8oHBqJgBK46ElXUFLumsqljbR2W4vJRPWa7UrIU3gg0nb544YYFajXU5KdjMJU1dVNla";
+export const token = SANITY_READ_TOKEN;
 
 if (!token) {
   throw new Error("Missing SANITY_API_READ_TOKEN");

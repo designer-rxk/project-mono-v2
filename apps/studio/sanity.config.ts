@@ -1,4 +1,5 @@
 import { HelloWorldAction } from "@actions";
+import { resolve } from "@lib";
 import { presentationTool } from "@sanity/presentation";
 import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "@schemas";
@@ -23,9 +24,10 @@ export default defineConfig({
     groqdPlaygroundTool(),
     visionTool(),
     presentationTool({
+      resolve,
       previewUrl: {
         draftMode: {
-          enable: "http://localhost:3000",
+          enable: "http://localhost:3000/api/draft-mode/enable",
         },
       },
     }),

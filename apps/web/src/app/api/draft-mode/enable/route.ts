@@ -4,7 +4,7 @@ import { draftMode } from "next/headers";
 import { redirect } from "next/navigation";
 
 export async function GET(request: Request) {
-  const { isValid, redirectTo = "/" } = await validatePreviewUrl(
+  const { isValid } = await validatePreviewUrl(
     client.withConfig({ token }),
     request.url,
   );
@@ -15,5 +15,5 @@ export async function GET(request: Request) {
 
   draftMode().enable();
 
-  redirect(redirectTo);
+  redirect("/");
 }

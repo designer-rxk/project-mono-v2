@@ -18,6 +18,7 @@ export default defineCliConfig({
         "@fields": path.resolve(__dirname, "./src/schemas/fields/index.ts"),
         "@utils": path.resolve(__dirname, "./src/schemas/utils/index.ts"),
         "@schemas": path.resolve(__dirname, "./src/schemas/index.ts"),
+        "@lib": path.resolve(__dirname, "./src/lib/index.ts"),
       },
     },
   },
